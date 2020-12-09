@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo apt-get update
+sudo apt-get upgrade -y
 echo "Credits gghhkm https://github.com/gghhkm"
 Set=$1
 Sync=$2
