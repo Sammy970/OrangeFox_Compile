@@ -34,11 +34,11 @@ if [ "$DeviceTrees" -eq 0 ]; then
 
 elif [ "$DeviceTrees" = 'jasmin_sprout' ]; then
 	cd
-  cd scripts/OrangeFox
+        cd scripts/OrangeFox
 	git clone https://github.com/gghhkm/Xiaomi_Jasmine_Sprout_OFRP_Tree.git device/xiaomi/jasmine_sprout
-  git clone https://github.com/nebrassy/device_xiaomi_sdm660-common-TWRP.git device/xiaomi/sdm660-common
-  git clone https://github.com/xiaomi-sdm660/android_vendor_xiaomi_sdm660-common.git vendor/xiaomi/sdm660-common 
-  cd
+        git clone https://github.com/nebrassy/device_xiaomi_sdm660-common-TWRP.git device/xiaomi/sdm660-common
+        git clone https://github.com/xiaomi-sdm660/android_vendor_xiaomi_sdm660-common.git vendor/xiaomi/sdm660-common 
+        cd
   
 #Build
 if [ "$Build" -eq 0 ]; then
