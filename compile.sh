@@ -37,8 +37,7 @@ if [ "$DeviceTrees" -eq 0 ]; then
 elif [ "$DeviceTrees" = 'jasmin_sprout' ]; then
 	cd
         cd scripts/OrangeFox
-	git clone https://github.com/gghhkm/Xiaomi_Jasmine_Sprout_OFRP_Tree.git -test device/xiaomi/jasmine_sprout
-
+	git clone https://github.com/gghhkm/Xiaomi_Jasmine_Sprout_OFRP_Tree.git -b test device/xiaomi/jasmine_sprout
         cd
   
 #Build
