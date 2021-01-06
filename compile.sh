@@ -30,7 +30,7 @@ echo "__________________________________________________________________________
 echo " Now lets add your trees "
 cd
 cd scripts/Orangefox
-git clone https://github.com/Ryukendo9/android_device_xiaomi_jasmine_sprout-OFRP device/xiaomi/jasmine_sprout
+git clone device/xiaomi/jasmine_sprout
 
 echo "_________________________________________________________________________________________"
 
