@@ -1,13 +1,17 @@
 echo " Hello, Thankyou for using this script "
 echo " You can easily build orange fox with this script for any device you like"
 echo " First lets setup the environment "
+echo " Press Enter to Start "
 read Ans
-_________________________________________________________________________________________
+
+echo "_________________________________________________________________________________________"
 
 cd
 git clone https://github.com/akhilnarang/scripts
 bash scripts/setup/android_build_env.sh
-_________________________________________________________________________________________
+
+echo "_________________________________________________________________________________________"
+
 echo " Now lets sync the Latest Orange Fox Sources [ Latest 9.0 ] "
 read ans 
 cd
@@ -16,8 +20,80 @@ mkdir Orangefox
 cd Orangefox
 repo init --depth=1 -q -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync -c -f -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
-_________________________________________________________________________________________
+
+echo "_________________________________________________________________________________________"
+
 clear
-_________________________________________________________________________________________
-echo " Now give me what you want to export "
-read 
+
+echo "_________________________________________________________________________________________"
+
+echo " Now lets add your trees "
+cd
+cd scripts/Orangefox
+git clone https://github.com/Ryukendo9/android_device_xiaomi_jasmine_sprout-OFRP device/xiaomi/jasmine_sprout
+
+echo "_________________________________________________________________________________________"
+
+echo " Now lets start building the environment "
+cd
+cd scripts/Orangefox/
+source build/envsetup.sh
+
+echo "_________________________________________________________________________________________"
+
+echo " Now tell me the name of the maintainer "
+read main
+
+echo "_________________________________________________________________________________________"
+
+#echo " Now tell me the codename for your device "
+#read code
+
+echo "_________________________________________________________________________________________"
+
+echo " Now lets export some stuff related to Mi A2 [Jasmine_sprout] "
+export OF_MAINTAINER="$main"
+export OF_AB_DEVICE=1
+export ALLOW_MISSING_DEPENDENCIES=true
+export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+export FOX_R11=1
+export FOX_ADVANCED_SECURITY=1
+export FOX_REPLACE_BUSYBOX_PS=1
+export FOX_REPLACE_TOOLBOX_GETPROP=1
+export FOX_USE_TAR_BINARY=1
+export FOX_USE_NANO_EDITOR=1
+export FOX_VERSION="R11 OP6T TEST BUILD"
+export OF_USE_TWRP_SAR_DETECT=1
+export OF_USE_MAGISKBOOT=1
+export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
+export OF_NO_SAMSUNG_SPECIAL=1
+export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
+export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
+export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
+export OF_PATCH_AVB20=1
+export OF_SUPPORT_PRE_FLASH_SCRIPT=1
+export OF_DONT_KEEP_LOG_HISTORY=1
+export OF_HIDE_NOTCH=1
+export OF_STATUS_INDENT_LEFT=48
+export OF_STATUS_INDENT_RIGHT=48
+export OF_SCREEN_H=2160
+export OF_FBE_METADATA_MOUNT_IGNORE=1
+export OF_CHECK_OVERWRITE_ATTEMPTS=1
+export LC_ALL="C"
+
+clear
+echo "_________________________________________________________________________________________"
+
+echo " Lets Lunch it all together 😉😋 "
+lunch omni_jasmine_sprout
+
+echo "_________________________________________________________________________________________"
+
+echo " Lets Start Building "
+mka recoveryimage
+
+echo "_________________________________________________________________________________________"
+
+echo " Thankyou for using my Script " 
+echo " Do follow my Github Account for more scripts : https://github.com/Sammy970 "
+echo " Would love to help you "
