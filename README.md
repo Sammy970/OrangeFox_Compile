@@ -11,6 +11,6 @@ _______________________________________
 
 If you have any Doubts regarding this Script, you can ask me on my telegram @Sammy970 https://t.me/Sammy970
 
-Would love to help you. 
+Would love to help you.
 
 _______________________________________
