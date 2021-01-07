@@ -1,4 +1,18 @@
 #!/bin/bash
+echo " Credits : gghhkm [ https://github.com/gghhkm ]
+echo "
+.█████╗..█████╗.███╗...███╗██████╗.██╗██╗.....███████╗....██╗.......██╗██╗████████╗██╗..██╗....
+██╔══██╗██╔══██╗████╗.████║██╔══██╗██║██║.....██╔════╝....██║..██╗..██║██║╚══██╔══╝██║..██║..
+██║..╚═╝██║..██║██╔████╔██║██████╔╝██║██║.....█████╗......╚██╗████╗██╔╝██║...██║...███████║....
+██║..██╗██║..██║██║╚██╔╝██║██╔═══╝.██║██║.....██╔══╝.......████╔═████║.██║...██║...██╔══██║..
+╚█████╔╝╚█████╔╝██║.╚═╝.██║██║.....██║███████╗███████╗.....╚██╔╝.╚██╔╝.██║...██║...██║..██║.....
+.╚════╝..╚════╝.╚═╝.....╚═╝╚═╝.....╚═╝╚══════╝╚══════╝......╚═╝...╚═╝..╚═╝...╚═╝...╚═╝..╚═╝...
+██████╗..█████╗..██╗.......██╗███████╗██████╗...██╗...
+██╔══██╗██╔══██╗.██║..██╗..██║██╔════╝██╔══██╗..██║..
+██████╔╝██║..██║.╚██╗████╗██╔╝█████╗..██████╔╝..██║.....
+██╔═══╝.██║..██║..████╔═████║.██╔══╝..██╔══██╗..╚═╝...
+██║.....╚█████╔╝..╚██╔╝.╚██╔╝.███████╗██║..██║...██╗....
+╚═╝......╚════╝....╚═╝...╚═╝..╚══════╝╚═╝..╚═╝...╚═╝. "
 echo " Hello, Thankyou for using this script "
 echo " You can easily build orange fox with this script for your Xiaomi Device "
 echo " First lets setup the environment "
@@ -28,15 +42,31 @@ clear
 
 echo "_________________________________________________________________________________________"
 
-echo " Now tell me your Xiaomi device codename "
+echo " Now tell me your device codename "
 read code 
 
-echo " Now Give me your trees github link "
-read trees
+echo "_________________________________________________________________________________________"
 
+echo " So which device you have ? "
+echo " Answer 1 = xiaomi and 2 = oneplus "
+read Answer
+
+if [ $Answer = 1 ]
+then
+echo " Give me your Xiaomi Device trees. "
+read Xtree
 cd
-cd scripts/Orangefox
-git clone $trees device/xiaomi/$code
+cd scripts/Orangefox/
+git clone $Xtree device/xiaomi/$code
+
+elif [ $Answer = 2 ]
+then
+echo " Give me your Oneplus Device trees. "
+read Otree
+cd
+cd scripts/Orangefox/
+git clone $Otree device/oneplus/$code
+fi
 
 echo "_________________________________________________________________________________________"
 
@@ -100,3 +130,10 @@ echo "__________________________________________________________________________
 echo " Thankyou for using my Script " 
 echo " Do follow my Github Account for more scripts : https://github.com/Sammy970 "
 echo " Would love to help you "
+echo "
+██████╗..█████╗.███╗..██╗███████╗..██╗.██╗...
+██╔══██╗██╔══██╗████╗.██║██╔════╝..██║.██║....
+██║..██║██║..██║██╔██╗██║█████╗....██║.██║..
+██║..██║██║..██║██║╚████║██╔══╝....╚═╝.╚═╝.....
+██████╔╝╚█████╔╝██║.╚███║███████╗...██╗.██╗...
+╚═════╝..╚════╝.╚═╝..╚══╝╚══════╝...╚═╝.╚═╝....."
