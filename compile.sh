@@ -27,10 +27,15 @@ clear
 
 echo "_________________________________________________________________________________________"
 
-echo " Now lets add your trees "
+echo " Now tell me your Xiaomi device codename "
+read code 
+
+echo " Now Give me your trees github link "
+read trees
+
 cd
 cd scripts/Orangefox
-git clone device/xiaomi/jasmine_sprout
+git clone $trees device/xiaomi/$code
 
 echo "_________________________________________________________________________________________"
 
@@ -85,7 +90,7 @@ clear
 echo "_________________________________________________________________________________________"
 
 echo " Lets Lunch it all together 😉😋 "
-lunch omni_jasmine_sprout
+lunch omni_$code
 
 echo "_________________________________________________________________________________________"
 
