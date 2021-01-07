@@ -85,7 +85,6 @@ export OF_STATUS_INDENT_RIGHT=48
 export OF_SCREEN_H=2160
 export OF_FBE_METADATA_MOUNT_IGNORE=1
 export OF_CHECK_OVERWRITE_ATTEMPTS=1
-export LC_ALL="C"
 
 clear
 echo "_________________________________________________________________________________________"
