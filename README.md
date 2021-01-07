@@ -1,4 +1,4 @@
-# OrangeFox For your Xiaomi Device
+# OrangeFox For your Xiaomi and Oneplus Device
 
 Hello Everyone !!!
 _______________________________________
