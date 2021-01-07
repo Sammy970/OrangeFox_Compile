@@ -14,7 +14,7 @@ echo "
 ██║.....╚█████╔╝..╚██╔╝.╚██╔╝.███████╗██║..██║...██╗....
 ╚═╝......╚════╝....╚═╝...╚═╝..╚══════╝╚═╝..╚═╝...╚═╝. "
 echo " Hello, Thankyou for using this script "
-echo " You can easily build orange fox with this script for your Xiaomi Device "
+echo " You can easily build orange fox with this script for your Xiaomi and Oneplus Device "
 echo " First lets setup the environment "
 echo " Press Enter to Start "
 read Ans
