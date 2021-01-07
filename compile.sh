@@ -17,7 +17,7 @@ echo " Hello, Thankyou for using this script "
 echo " You can easily build orange fox with this script for your Xiaomi and Oneplus Device "
 echo " First lets setup the environment "
 echo " Press Enter to Start "
-read Ans
+read Ans1
 
 echo "_________________________________________________________________________________________"
 
@@ -49,9 +49,9 @@ echo "__________________________________________________________________________
 
 echo " So which device you have ? "
 echo " Answer 1 = xiaomi and 2 = oneplus "
-read Answer
+read Ans2
 
-if [ $Answer = 1 ]
+if [ $Ans2= 1 ]
 then
 echo " Give me your Xiaomi Device trees. "
 read Xtree
@@ -59,7 +59,7 @@ cd
 cd scripts/Orangefox/
 git clone $Xtree device/xiaomi/$code
 
-elif [ $Answer = 2 ]
+elif [ $Ans2 = 2 ]
 then
 echo " Give me your Oneplus Device trees. "
 read Otree
@@ -85,34 +85,72 @@ read ver
 
 echo "_________________________________________________________________________________________"
 
-echo " Now lets export some stuff related to Mi A2 [Jasmine_sprout] "
+echo " Now lets do some export things for your device "
+
+echo " Have you already created a config file with the export settings for your device ? "
+echo " Options "
+echo " 1. You already have a config file created by this script "
+echo " 2. You dont have a config file and now we will create it for you and will use it later when rebuilding Ofox "
+
+echo "_________________________________________________________________________________________"
+
+read Ans3
+
+if [ $Ans3 = 1 ]
+then
+cd
+ls scripts/Orangefox/configs/
+echo ""
+echo " Now write the name of config that you want to use "
+read con
+echo " Great then lets export your device settings "
+echo " Press enter when ready "
+read enter
+cd
+source ~/scripts/Orangefox/configs/$con
+echo " Done exporting your Device Specific settings "
+
+echo "_________________________________________________________________________________________"
+
+elif [ $Ans3 = 2 ]
+then
+echo " Lets create a config for you to use for you device export settings "
+cd
+mkdir scripts/Orangefox/configs/
+touch scripts/Orangefox/configs/$code
+
+echo " Config file created "
+echo ""
+echo " Now i will open your config file and you just type the device specific export settings in it and save it "
+echo " Press enter when ready "
+read enter
+cd
+nano scripts/Orangefox/configs/$code
+cd
+echo " Now your config file is saved "
+echo ""
+echo " Great then lets export your device settings "
+echo " Press enter when ready "
+read enter
+cd
+source ~/scripts/Orangefox/configs/$code
+echo " Done exporting your Device Specific settings "
+fi
+
+echo "_________________________________________________________________________________________"
+
 export OF_MAINTAINER="$main"
-export OF_AB_DEVICE=1
+
+# Universal variables for building
 export ALLOW_MISSING_DEPENDENCIES=true
-export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-export FOX_R11=1
-export FOX_ADVANCED_SECURITY=1
-export FOX_REPLACE_BUSYBOX_PS=1
-export FOX_REPLACE_TOOLBOX_GETPROP=1
-export FOX_USE_TAR_BINARY=1
-export FOX_USE_NANO_EDITOR=1
+export TW_DEFAULT_LANGUAGE="en"
+# To use ccache to speed up building
+export USE_CCACHE="1"
+# Enforced by R11 rules
+export FOX_R11="1"
+export FOX_ADVANCED_SECURITY="1"
+export FOX_RESET_SETTINGS="1"
 export FOX_VERSION="$ver"
-export OF_USE_TWRP_SAR_DETECT=1
-export OF_USE_MAGISKBOOT=1
-export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
-export OF_NO_SAMSUNG_SPECIAL=1
-export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
-export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
-export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
-export OF_PATCH_AVB20=1
-export OF_SUPPORT_PRE_FLASH_SCRIPT=1
-export OF_DONT_KEEP_LOG_HISTORY=1
-export OF_HIDE_NOTCH=1
-export OF_STATUS_INDENT_LEFT=48
-export OF_STATUS_INDENT_RIGHT=48
-export OF_SCREEN_H=2160
-export OF_FBE_METADATA_MOUNT_IGNORE=1
-export OF_CHECK_OVERWRITE_ATTEMPTS=1
 
 clear
 echo "_________________________________________________________________________________________"
