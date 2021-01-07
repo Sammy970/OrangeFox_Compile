@@ -50,10 +50,8 @@ echo "__________________________________________________________________________
 echo " Now tell me the name of the maintainer "
 read main
 
-echo "_________________________________________________________________________________________"
-
-#echo " Now tell me the codename for your device "
-#read code
+echo " Now tell me the Fox Version [ eg:- Official, Unofficial etc ] "
+read ver
 
 echo "_________________________________________________________________________________________"
 
@@ -68,7 +66,7 @@ export FOX_REPLACE_BUSYBOX_PS=1
 export FOX_REPLACE_TOOLBOX_GETPROP=1
 export FOX_USE_TAR_BINARY=1
 export FOX_USE_NANO_EDITOR=1
-export FOX_VERSION="Unofficial Build"
+export FOX_VERSION="$ver"
 export OF_USE_TWRP_SAR_DETECT=1
 export OF_USE_MAGISKBOOT=1
 export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
