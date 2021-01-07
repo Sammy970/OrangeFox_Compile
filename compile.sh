@@ -1,3 +1,4 @@
+#!/bin/bash
 echo " Hello, Thankyou for using this script "
 echo " You can easily build orange fox with this script for your Xiaomi Device "
 echo " First lets setup the environment "
