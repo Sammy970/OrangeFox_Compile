@@ -12,16 +12,18 @@ cd
 git clone https://github.com/akhilnarang/scripts
 bash scripts/setup/android_build_env.sh
 
-echo "_________________________________________________________________________________________"
-
-echo " Now lets sync the Latest Orange Fox Sources [ Latest 9.0 ] "
-read ans 
 cd
 cd scripts
 mkdir Orangefox
-cd Orangefox
+cd
+cd scripts/Orangefox/
 git config --global user.email "jainsamyak2002.sj@gmail.com"
 git config --global user.email "Samyak"
+
+echo "_________________________________________________________________________________________"
+
+echo " Now lets sync the Latest Orange Fox Sources [ Latest 9.0 ] "
+read a 
 repo init --depth=1 -q -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync -c -f -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
