@@ -18,7 +18,7 @@ mkdir Orangefox
 cd
 cd scripts/Orangefox/
 git config --global user.email "jainsamyak2002.sj@gmail.com"
-git config --global user.email "Samyak"
+git config --global user.name "Samyak"
 
 echo "_________________________________________________________________________________________"
 
