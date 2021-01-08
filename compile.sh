@@ -20,6 +20,8 @@ cd
 cd scripts
 mkdir Orangefox
 cd Orangefox
+git config --global user.email "jainsamyak2002.sj@gmail.com"
+git config --global user.email "Samyak"
 repo init --depth=1 -q -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync -c -f -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
