@@ -22,8 +22,8 @@ git config --global user.name "Samyak"
 
 echo "_________________________________________________________________________________________"
 
-echo " Now lets sync the Latest Orange Fox Sources [ Latest 9.0 ] "
-read a 
+echo "Now lets sync the Latest Orange Fox Sources [ Latest 9.0 ]"
+sleep 3
 repo init --depth=1 -q -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync -c -f -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
