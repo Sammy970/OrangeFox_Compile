@@ -1,11 +1,10 @@
 # OrangeFox For your Xiaomi and Oneplus Device
 
 Hello Everyone !!!
-_______________________________________
 
 <p align="center">
   <img src="https://pbs.twimg.com/media/EYtmbB5XgAQG3Wr.jpg" width="550" title="hover text">
-
+_______________________________________
 Welcome to my OrangeFox Repo 
 
 Here you can use my Script to create OrangeFox Recovery for your Xiaomi and Oneplus Device very easily.
