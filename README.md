@@ -3,7 +3,8 @@
 Hello Everyone !!!
 _______________________________________
 
-!EYtmbB5XgAQG3Wr.jpg
+<p align="center">
+  <img src="https://pbs.twimg.com/media/EYtmbB5XgAQG3Wr.jpg" width="350" title="hover text">
 
 Welcome to my OrangeFox Repo 
 
