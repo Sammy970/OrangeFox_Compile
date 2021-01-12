@@ -4,7 +4,7 @@ Hello Everyone !!!
 _______________________________________
 
 <p align="center">
-  <img src="https://pbs.twimg.com/media/EYtmbB5XgAQG3Wr.jpg" width="350" title="hover text">
+  <img src="https://pbs.twimg.com/media/EYtmbB5XgAQG3Wr.jpg" width="550" title="hover text">
 
 Welcome to my OrangeFox Repo 
 
