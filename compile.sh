@@ -12,13 +12,19 @@ cd
 git clone https://github.com/akhilnarang/scripts
 bash scripts/setup/android_build_env.sh
 
+echo " Tell me your UserEmail for github Config : "
+read email
+
+echo " Tell me your Name for github Config : "
+read name
+
 cd
 cd scripts
 mkdir Orangefox
 cd
 cd scripts/Orangefox/
-git config --global user.email "jainsamyak2002.sj@gmail.com"
-git config --global user.name "Samyak"
+git config --global user.email "$email"
+git config --global user.name "$name"
 
 echo "_________________________________________________________________________________________"
 
@@ -39,12 +45,12 @@ read code
 echo "_________________________________________________________________________________________"
 
 echo " So which device you have ? "
-echo " Answer 1 = xiaomi and 2 = oneplus "
+echo " Answer 1 = xiaomi and 2 = oneplus and 3 = realme/oppo "
 read Ans2
 
 if [ $Ans2= 1 ]
 then
-echo " Give me your Xiaomi Device trees. "
+echo " Give me your Xiaomi Device trees. [Give the github link ] "
 read Xtree
 cd
 cd scripts/Orangefox/
@@ -52,12 +58,21 @@ git clone $Xtree device/xiaomi/$code
 
 elif [ $Ans2 = 2 ]
 then
-echo " Give me your Oneplus Device trees. "
+echo " Give me your Oneplus Device trees. [Give the github link ] "
 read Otree
 cd
 cd scripts/Orangefox/
 git clone $Otree device/oneplus/$code
+
+else [ $Ans2 = 3 ]
+then
+echo " Give me your Realme Device Trees. [Give the github link ] "
+read Rtree
+cd
+cd scripts/Orangefox/
+git clone $Rtree device/oppo/$code
 fi
+
 
 echo "_________________________________________________________________________________________"
 
@@ -113,6 +128,8 @@ touch scripts/Orangefox/configs/$code
 echo " Config file created "
 echo ""
 echo " Now i will open your config file and you just type the device specific export settings in it and save it "
+echo " That config file will be used now and will be user later if you want "
+echo " Dont Change the Name of the file, leave it as it is "
 echo " Press enter when ready "
 read enter
 cd
