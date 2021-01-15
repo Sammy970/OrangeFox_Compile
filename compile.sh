@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo  Credits : gghhkm [ https://github.com/gghhkm ] , Ryukendo9
 echo " Hello, Thankyou for using this script "
-echo " You can easily build orange fox with this script for your Xiaomi and Oneplus Device "
+echo " You can easily build orange fox with this script for your Xiaomi , Oneplus , Realme Device "
 echo " First lets setup the environment "
 echo " Press Enter to Start "
 read Ans1
