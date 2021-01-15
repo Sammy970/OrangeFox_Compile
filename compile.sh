@@ -8,6 +8,11 @@ read Ans1
 
 echo "_________________________________________________________________________________________"
 
+echo " Have you used this script before ? [ Like have you synced your OFOX Source with this script ] "
+echo " Ans 1 = yes and 2 = no "
+read ANS
+if [ $ANS = 2 ]
+then
 cd
 git clone https://github.com/akhilnarang/scripts
 bash scripts/setup/android_build_env.sh
@@ -34,7 +39,7 @@ repo init --depth=1 -q -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync -c -f -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
 echo "_________________________________________________________________________________________"
-
+fi
 clear
 
 echo "_________________________________________________________________________________________"
@@ -65,7 +70,6 @@ cd scripts/Orangefox/
 git clone $Otree device/oneplus/$code
 
 else [ $Ans2 = 3 ]
-then
 echo " Give me your Realme Device Trees. [Give the github link ] "
 read Rtree
 cd
