@@ -1,4 +1,4 @@
-# OrangeFox For your Xiaomi and Oneplus Device
+# OrangeFox For your Xiaomi , Oneplus , Realme Device
 
 Hello Everyone !!!
 
@@ -8,7 +8,7 @@ Hello Everyone !!!
 _______________________________________
 Welcome to my OrangeFox Repo 
 
-Here you can use my Script to create OrangeFox Recovery for your Xiaomi and Oneplus Device very easily.
+Here you can use my Script to create OrangeFox Recovery for your Xiaomi and Oneplus and Realme Device very easily.
 
 Now you dont need to remember which commands to use, just run this script and Compile OrangeFox Recovery 🦊
 _______________________________________
